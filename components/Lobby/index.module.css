@@ -43,6 +43,12 @@
   flex-direction: column;
   gap: 16px;
 }
+.loading_wrapper {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media screen and (max-width: 991px) {
   .game_list_wrapper {

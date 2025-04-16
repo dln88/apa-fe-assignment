@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import GameList from "../GameCard";
-
+import Loading from "../Loading";
 import customizedFetch from "@/ultis/fetch";
 import { GameListInterface, GameComponentType } from "@/consts";
 
@@ -46,7 +46,11 @@ export default function Casino() {
   }, [gameList?.components]);
 
   if (isLoading) {
-    return <div className={styles.html_content_wrapper}>Loading...</div>;
+    return (
+      <div className={styles.loading_wrapper}>
+        <Loading />
+      </div>
+    );
   }
 
   if (error) {
